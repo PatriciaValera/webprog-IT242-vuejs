@@ -4,10 +4,11 @@
   padding: 10px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 img {
   width: 70px;
+  height: auto;
   margin: 10px;
 }
