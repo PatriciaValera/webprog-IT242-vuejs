@@ -130,6 +130,21 @@
   </div>
 </section>
 
+    <div id="app">
+      {{ message }}
+    </div>
+
+    <div id="app2">
+        <div>
+            <img v-for="x in manyFoods" v-bind:src="x">
+        </div>
+    </div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/images.js"></script>
+
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3">
   © 2026 Patricia Marie Valera
