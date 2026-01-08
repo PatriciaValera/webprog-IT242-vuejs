@@ -29,7 +29,7 @@
     .navbar.bg-dark,
       header.bg-dark,
       footer.bg-dark {
-        background-color: rgb(187, 0, 255) !important;
+        background-color: rgb(212, 0, 255) !important;
     }
     /* Make navbar links white */
     .navbar .nav-link {
@@ -39,6 +39,16 @@
     /* Make them darker on hover */
     .navbar .nav-link:hover {
         color: #dfdede !important;
+}
+
+    .skill-card {
+      border: 2px solid rgb(212, 0, 255);
+}
+
+    .skill-card:hover {
+      border-color: purple; /* Bootstrap purple */
+      transform: translateY(-4px);
+      transition: all 0.3s ease;
 }
 
   </style>
@@ -85,21 +95,20 @@
     <h2 class="text-center mb-4">Skills</h2>
     <div class="row text-center">
       <div class="col-md-3 mb-3">
-        <div class="card p-3 shadow-sm" style="border: 2px solid rgb(212, 0, 255);">HTML</div>
+        <div class="card p-3 shadow-sm">HTML</div>
       </div>
       <div class="col-md-3 mb-3">
-        <div class="card p-3 shadow-sm" style="border: 2px solid rgb(212, 0, 255);">CSS</div>
+        <div class="card p-3 shadow-sm">CSS</div>
       </div>
       <div class="col-md-3 mb-3">
-        <div class="card p-3 shadow-sm" style="border: 2px solid rgb(212, 0, 255);">Bootstrap</div>
+        <div class="card p-3 shadow-sm">Bootstrap</div>
       </div>
       <div class="col-md-3 mb-3">
-        <div class="card p-3 shadow-sm" style="border: 2px solid rgb(212, 0, 255);">Flutter</div>
+        <div class="card p-3 shadow-sm">Flutter</div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Gallery -->
 <section id="gallery" class="py-5 bg-light">
@@ -134,11 +143,11 @@
 </section>
 
 
-    <div id="app" class="text-white text-center py-3"></div>>
+    <div id="app">
         {{ message }}
     </div>
 
-    <div id="app2" class="text-white text-center py-3">
+    <div id="app2">
       <div>
         <img v-for="x in manyFoods" v-bind:src="x">
       </div>
