@@ -98,13 +98,14 @@
       border-color: rgb(150, 0, 230);
     }
 
-    /* Purple shadow only on focus */
+    /* Purple border always, shadow only on focus */
     .purple-input {
       border: 2px solid var(--brand-purple);
       box-shadow: none;
       transition: box-shadow 0.2s ease;
     }
     .purple-input:focus {
+      border-color: var(--brand-purple);
       box-shadow: 0 0 10px rgba(200, 150, 255, 0.5);
     }
 
