@@ -21,23 +21,26 @@
       border-radius: 50%;
     }
 
-    /* UPDATED GALLERY STYLES */
     .gallery {
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-    .gallery-item {
-      border-radius: 20px;
-      overflow: hidden;
-    }
+/* Equal card height */
+.gallery-item {
+  border-radius: 20px;
+  overflow: hidden;
+}
 
-    .gallery-img {
-      width: 100%;
-      object-fit: cover;
-      display: block;
-      border-radius: 20px;
-    }
+/* Force same height for all images */
+.gallery-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
 
     .gallery-item:nth-child(1) img { height: 420px; }
     .gallery-item:nth-child(2) img { height: 300px; }
