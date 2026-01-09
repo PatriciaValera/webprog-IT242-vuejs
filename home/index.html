@@ -87,22 +87,15 @@
   </div>
 </section>
 
-<!-- Skills and Contact Side by Side with separate container -->
+<!-- Skills and Contact Side by Side -->
 <section id="skills-contact" class="py-5">
   <div class="container">
     <div class="row">
-      <!-- Skills Section in 2 rows, 2 columns -->
+      <!-- Skills Section -->
       <div class="col-md-6 mb-4">
         <h2 class="text-center mb-4">Skills</h2>
         <div class="row text-center">
-          <!-- 1st Row -->
-          <div class="col-md-6 mb-3" v-for="(skill, index) in skills.slice(0, 2)" :key="index">
-            <div class="card p-3 shadow-sm skill-card">
-              {{ skill }}
-            </div>
-          </div>
-          <!-- 2nd Row -->
-          <div class="col-md-6 mb-3" v-for="(skill, index) in skills.slice(2, 4)" :key="index">
+          <div class="col-md-3 mb-3" v-for="skill in skills" :key="skill">
             <div class="card p-3 shadow-sm skill-card">
               {{ skill }}
             </div>
