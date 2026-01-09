@@ -23,11 +23,13 @@
 
     /* UPDATED GALLERY STYLES */
     .gallery {
-      grid-auto-rows: 8px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
     }
 
     .gallery-item {
-      grid-row: span 40;
+      border-radius: 20px;
+      overflow: hidden;
     }
 
     .gallery-img {
