@@ -90,6 +90,15 @@
       letter-spacing: 0.5px;
     }
 
+    .btn-primary {
+      background-color: var(--brand-purple);
+      border-color: var(--brand-purple);
+    }
+    .btn-primary:hover {
+      background-color: rgb(150, 0, 230);
+      border-color: rgb(150, 0, 230);
+    }
+
     @media (max-width: 767.98px) {
       .about-left {
         margin-bottom: 18px;
@@ -160,10 +169,16 @@
       </div>
     </div>
 
-    <!-- Optional anchor target for "LEARN MORE" -->
+    <!-- Contact Me form -->
     <div id="learn-more" class="mt-5">
-      <h3>More About Me</h3>
-      <p>Feel free to explore my portfolio, contact me, or check out my latest projects and collaborations.</p>
+      <h3 class="mb-3">Contact Me</h3>
+      <form>
+        <div class="mb-3">
+          <label for="messageInput" class="form-label">Send me a message</label>
+          <input type="text" class="form-control" id="messageInput" placeholder="Type your message here...">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
   </main>
 
