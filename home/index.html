@@ -22,33 +22,41 @@
     }
 
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
-    }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
 
-    .gallery-item {
-      border-radius: 20px;
-      overflow: hidden;
-    }
+/* Equal card height */
+.gallery-item {
+  border-radius: 20px;
+  overflow: hidden;
+}
 
-    .gallery-img {
-      width: 100%;
-      height: 350px;
-      object-fit: cover;
-      display: block;
-      border-radius: 20px;
-    }
+/* Force same height for all images */
+.gallery-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+    .gallery-item:nth-child(1) img { height: 420px; }
+    .gallery-item:nth-child(2) img { height: 300px; }
+    .gallery-item:nth-child(3) img { height: 450px; }
+    .gallery-item:nth-child(4) img { height: 320px; }
 
     .navbar.bg-dark,
     header.bg-dark,
     footer.bg-dark {
       background-color: rgb(170, 0, 255) !important;
     }
-
     .navbar .nav-link {
       color: #ffffff !important;
-      cursor: pointer;
+    }
+    .navbar .nav-link:hover {
+      color: #dfdede !important;
     }
 
     .skill-card {
@@ -70,90 +78,75 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
-    <a class="navbar-brand">Tricia's Profile</a>
+    <a class="navbar-brand" href="#">Tricia's Profile</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto nav">
-        <li class="nav-item">
-          <a class="nav-link active" data-bs-toggle="tab" data-bs-target="#aboutTab">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#skillsTab">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#galleryTab">Gallery</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" data-bs-target="#contactTab">Contact</a>
-        </li>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- TAB CONTENT -->
-<div class="tab-content">
-
-  <!-- ABOUT -->
-  <div class="tab-pane fade show active" id="aboutTab">
-    <section class="py-5 mt-5 text-center bg-light">
-      <div class="container">
-        <img :src="profileImg" class="profile-img mb-3">
-        <h1 class="fw-bold">{{ name }}</h1>
-        <p class="text-muted">Nickname: {{ nickname }}</p>
-        <p class="text-muted">{{ course }}</p>
-        <p class="text-muted">"{{ quote }}"</p>
-        <p class="lead">{{ description }}</p>
-      </div>
-    </section>
+<section id="about" class="py-5 mt-5 text-center bg-light">
+  <div class="container">
+    <img :src="profileImg" alt="img1" class="profile-img mb-3">
+    <h1 class="fw-bold">{{ name }}</h1>
+    <p class="text-muted">Nickname: {{ nickname }}</p>
+    <p class="text-muted">{{ course }}</p>
+    <p class="text-muted">"{{ quote }}"</p>
+    <p class="lead">{{ description }}</p>
   </div>
+</section>
 
-  <!-- SKILLS -->
-  <div class="tab-pane fade" id="skillsTab">
-    <section class="py-5">
-      <div class="container">
+<section id="skills-contact" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mb-4">
         <h2 class="text-center mb-4">Skills</h2>
         <div class="row text-center">
-          <div class="col-md-3 mb-3" v-for="skill in skills" :key="skill">
+          <div class="col-md-6 mb-3" v-for="(skill, index) in skills.slice(0, 2)" :key="index">
+            <div class="card p-3 shadow-sm skill-card">
+              {{ skill }}
+            </div>
+          </div>
+          <div class="col-md-6 mb-3" v-for="(skill, index) in skills.slice(2, 4)" :key="index">
             <div class="card p-3 shadow-sm skill-card">
               {{ skill }}
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
 
-  <!-- GALLERY -->
-  <div class="tab-pane fade" id="galleryTab">
-    <section class="py-5 bg-light">
-      <div class="container">
-        <h2 class="text-center mb-4">Tricia's Gallery</h2>
-        <div class="gallery">
-          <div class="gallery-item" v-for="img in gallery" :key="img">
-            <img :src="img" class="gallery-img">
-          </div>
+      <div class="col-md-6 mb-4">
+        <h2 class="text-center mb-4">Contact</h2>
+        <div class="text-center">
+          <p>Email: {{ email }}</p>
+          <p>GitHub: {{ github }}</p>
+          <p>LinkedIn: {{ linkedin }}</p>
         </div>
       </div>
-    </section>
+    </div>
   </div>
+</section>
 
-  <!-- CONTACT -->
-  <div class="tab-pane fade" id="contactTab">
-    <section class="py-5">
-      <div class="container text-center">
-        <h2>Contact</h2>
-        <p>Email: {{ email }}</p>
-        <p>GitHub: {{ github }}</p>
-        <p>LinkedIn: {{ linkedin }}</p>
+<!-- UPDATED GALLERY -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Tricia's Gallery</h2>
+    <div class="gallery">
+      <div class="gallery-item" v-for="img in gallery" :key="img">
+        <img :src="img" alt="gallery image" class="gallery-img">
       </div>
-    </section>
+    </div>
   </div>
+</section>
 
-</div>
 </div>
 
 <footer class="bg-dark text-white text-center py-3">
@@ -172,7 +165,8 @@ createApp({
       nickname: "Tricia",
       course: "Bachelor of Science in Information Technology",
       quote: "Don't waste your time with explanations, people only hear what they want to hear",
-      description: "I enjoy listening to music and watching movies, dramas, and anime in my free time.",
+      description: "I enjoy listening to music and watching movies, dramas, and anime in my free time. I also like reading manhwa, novels, and stories on Wattpad. I play badminton, a little bit of volleyball, and I love cycling. My goal is to graduate without repeating any year or course and to have a stable job in the future.",
+      
       profileImg: "https://github.com/PatriciaValera/webprog-IT242-bootstrap-template/raw/main/sb/images/img1.JPG",
       
       skills: ["HTML", "CSS", "Bootstrap", "Flutter"],
@@ -180,9 +174,12 @@ createApp({
       gallery: [
         "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img2.png",
         "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img3.png",
-        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img4.png"
-      
+        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img4.png",
+        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img5.png",
+        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img6.png",
+        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img7.png"
       ],
+      
       email: "pdvalera@student.apc.edu.ph",
       github: "github.com/PatriciaValera",
       linkedin: "linkedin.com/in/PatriciaMarieValera"
