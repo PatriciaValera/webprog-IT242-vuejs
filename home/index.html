@@ -22,30 +22,36 @@
     }
 
     .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      justify-content: center;
+    }
 
-/* Equal card height */
-.gallery-item {
-  border-radius: 20px;
-  overflow: hidden;
-}
+    .gallery-item {
+      border-radius: 20px;
+      overflow: hidden;
+    }
 
-/* Force same height for all images */
-.gallery-img {
-  width: 100%;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  border-radius: 20px;
-}
+    .gallery-img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      border-radius: 20px;
+    }
 
-    .gallery-item:nth-child(1) img { height: 420px; }
-    .gallery-item:nth-child(2) img { height: 300px; }
-    .gallery-item:nth-child(3) img { height: 450px; }
-    .gallery-item:nth-child(4) img { height: 320px; }
+    @media (max-width: 992px) {
+      .gallery {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
     .navbar.bg-dark,
     header.bg-dark,
@@ -166,11 +172,8 @@ createApp({
       course: "Bachelor of Science in Information Technology",
       quote: "Don't waste your time with explanations, people only hear what they want to hear",
       description: "I enjoy listening to music and watching movies, dramas, and anime in my free time. I also like reading manhwa, novels, and stories on Wattpad. I play badminton, a little bit of volleyball, and I love cycling. My goal is to graduate without repeating any year or course and to have a stable job in the future.",
-      
       profileImg: "https://github.com/PatriciaValera/webprog-IT242-bootstrap-template/raw/main/sb/images/img1.JPG",
-      
       skills: ["HTML", "CSS", "Bootstrap", "Flutter"],
-      
       gallery: [
         "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img2.png",
         "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img3.png",
@@ -180,9 +183,9 @@ createApp({
         "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img7.png",
         "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img8.jpg",
         "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img9.jpg",
-        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img10.jpg"
+        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img10.jpg",
+        "https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img11.jpg"
       ],
-      
       email: "pdvalera@student.apc.edu.ph",
       github: "github.com/PatriciaValera",
       linkedin: "linkedin.com/in/PatriciaMarieValera"
