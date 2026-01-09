@@ -21,35 +21,6 @@
       border-radius: 50%;
     }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 20px;
-    }
-
-    .gallery-item {
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .gallery-img {
-      height: 250px;
-      object-fit: cover;
-    }
-
-
-    @media (max-width: 992px) {
-      .gallery {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    @media (max-width: 576px) {
-      .gallery {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
     .navbar.bg-dark,
     header.bg-dark,
     footer.bg-dark {
@@ -67,16 +38,21 @@
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
-
     .skill-card:hover {
       background-color: rgba(170, 0, 255, 0.1);
       transform: scale(1.05);
+    }
+
+    /* Carousel image styling */
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+      border-radius: 12px;
     }
   </style>
 </head>
 
 <body>
-
 <div id="app">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -126,7 +102,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 mb-4">
+      <div class="col-md-6 mb-4" id="contact">
         <h2 class="text-center mb-4">Contact</h2>
         <div class="text-center">
           <p>Email: {{ email }}</p>
@@ -138,14 +114,29 @@
   </div>
 </section>
 
-<!-- UPDATED GALLERY -->
+<!-- UPDATED GALLERY AS CAROUSEL -->
 <section id="gallery" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-4">Tricia's Gallery</h2>
-    <div class="gallery">
-      <div class="gallery-item" v-for="img in gallery" :key="img">
-        <img :src="img" alt="gallery image" class="gallery-img">
+    <div id="triciaCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div 
+          class="carousel-item" 
+          v-for="(img, index) in gallery" 
+          :class="{ active: index === 0 }" 
+          :key="img"
+        >
+          <img :src="img" class="d-block w-100" alt="gallery image">
+        </div>
       </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#triciaCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#triciaCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
   </div>
 </section>
@@ -157,7 +148,6 @@
 </footer>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
 <script>
 const { createApp } = Vue;
 
