@@ -69,8 +69,21 @@
       letter-spacing: 0.5px;
     }
 
-    .btn-primary:focus,
-    .btn-primary:active {
+    /* Purple button styling */
+    .btn-purple {
+      background-color: var(--brand-purple);
+      color: #fff;
+      border-radius: var(--box-radius);
+      padding: 0.5rem 1.5rem;
+      font-weight: 600;
+      border: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .btn-purple:hover,
+    .btn-purple:focus {
+      background-color: #c400ff;
+      color: #fff;
       box-shadow: 0 0 10px rgba(170, 0, 255, 0.6);
     }
 
@@ -82,15 +95,6 @@
       outline: none;
       border: 2px solid var(--brand-purple);
       box-shadow: 0 0 8px rgba(170, 0, 255, 0.5);
-    }
-    
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-      filter: none;
-      background-color: var(--brand-purple);
-      border-radius: 50%;
-      padding: 12px;
-      background-size: 60% 60%;
     }
   </style>
 </head>
@@ -179,38 +183,24 @@
 
   </div>
 
-  <!-- IMAGE CAROUSEL -->
-  <div class="mt-5" style="max-width:900px;margin:auto;">
-    <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img2.jpg" class="d-block" alt="slide1">
-        </div>
-        <div class="carousel-item">
-          <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img3.jpg" class="d-block" alt="slide2">
-        </div>
-        <div class="carousel-item">
-          <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img4.jpg" class="d-block" alt="slide3">
-        </div>
-        <div class="carousel-item">
-          <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img5.jpg" class="d-block" alt="slide3">
-        </div>
-        <div class="carousel-item">
-          <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img6.jpg" class="d-block" alt="slide3">
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-
-      <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-
+  <!-- COLLEGE PHOTOS -->
+<div id="college-photos" class="mt-5">
+  <h3 class="text-center mb-4">College Memories</h3>
+  <div class="row g-3 justify-content-center">
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img2.jpg" alt="College 1" class="img-fluid rounded">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img3.jpg" alt="College 2" class="img-fluid rounded">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img5.jpg" alt="College 4" class="img-fluid rounded">
+    </div>
+    <div class="col-6 col-md-2">
+      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img6.jpg" alt="College 5" class="img-fluid rounded">
     </div>
   </div>
+</div>
 
   <!-- LEAVE COMMENT -->
   <div id="learn-more" class="mt-5 d-flex justify-content-center">
@@ -219,7 +209,7 @@
       <form id="commentForm">
         <input type="text" class="form-control purple-input mb-3" placeholder="Type your message here...">
         <div class="text-center">
-          <button class="btn btn-primary:active">Submit</button>
+          <button type="submit" class="btn btn-purple">Submit</button>
         </div>
       </form>
     </div>
