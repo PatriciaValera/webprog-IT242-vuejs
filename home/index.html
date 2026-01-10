@@ -64,7 +64,6 @@
       height: 100%;
       background-color: #fff;
     }
-
     .skill-title {
       font-weight: 700;
       letter-spacing: 0.5px;
@@ -79,21 +78,19 @@
       border: 2px solid var(--brand-purple);
       border-radius: var(--box-radius);
     }
-    
     .purple-input:focus {
       outline: none;
       border: 2px solid var(--brand-purple);
       box-shadow: 0 0 8px rgba(170, 0, 255, 0.5);
     }
 
-    /* Carousel styling (UPDATED) */
-    .carousel-inner img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      margin: 0 auto;
-      display: block;
-      border-radius: var(--box-radius);
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      filter: none;
+      background-color: var(--brand-purple);
+      border-radius: 50%;
+      padding: 12px;
+      background-size: 60% 60%;
     }
   </style>
 </head>
@@ -234,7 +231,7 @@
       <form id="commentForm">
         <input type="text" class="form-control purple-input mb-3" placeholder="Type your message here...">
         <div class="text-center">
-          <button class="btn btn-primary">Submit</button>
+          <button class="btn btn-primary: focus">Submit</button>
         </div>
       </form>
     </div>
