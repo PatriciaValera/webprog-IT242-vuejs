@@ -84,6 +84,20 @@
       box-shadow: 0 0 8px rgba(170, 0, 255, 0.5);
     }
 
+    .gallery-container {
+      max-width: 900px;   /* controls gallery width */
+      margin: 0 auto;     /* center horizontally */
+      position: relative;
+    }
+    .gallery-container img {
+      width: 100%;
+      height: auto;
+      max-height: 500px;  /* prevents it from getting too tall */
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+    
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       filter: none;
@@ -231,7 +245,7 @@
       <form id="commentForm">
         <input type="text" class="form-control purple-input mb-3" placeholder="Type your message here...">
         <div class="text-center">
-          <button class="btn btn-primary: focus">Submit</button>
+          <button class="btn btn-primary:active">Submit</button>
         </div>
       </form>
     </div>
