@@ -52,10 +52,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: "TriciaProfile"
-};
-</script>
+<script></script>
 
 <style src="./css/PersonalProfile.css"></style>
