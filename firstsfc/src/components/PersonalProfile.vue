@@ -28,3 +28,5 @@ Picture Gallery<br>
 
 </body>
 </html>
+
+<style src="./css/personalprofile.css"></style>
