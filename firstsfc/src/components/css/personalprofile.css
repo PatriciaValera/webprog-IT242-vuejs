@@ -1,6 +1,24 @@
-#app {
-  display: flex;
-  padding: 10px;
-  font-size: x-large;
-  background-color: rgb(170, 0, 255);
-    }
+
+body {
+  background-color: #dcd0ff;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: Aptos;
+  font-style: bold;
+}
+
+p {
+  color: black;
+  text-align: center;
+  font-family: Aptos;
+  font-size: 20px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,223 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>A Bit About Me — Who Am I?</title>
-
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --brand-purple: rgb(170, 0, 255);
-      --box-radius: 12px;
-    }
-
-    body {
-      background-color: #ffffff;
-      color: #333;
-      padding-top: 60px;
-    }
-
-    .section-header {
-      max-width: 900px;
-      margin: 0 auto 2rem auto;
-      text-align: center;
-    }
-    .section-header h6 {
-      letter-spacing: 2px;
-      color: #6c757d;
-      text-transform: uppercase;
-      margin-bottom: 0.25rem;
-    }
-    .section-header h2 {
-      font-weight: 800;
-      margin-bottom: 1rem;
-    }
-    .section-header p {
-      color: #6c757d;
-      margin: 0 auto;
-    }
-
-    .about-left {
-      background-color: var(--brand-purple);
-      color: #fff;
-      border-radius: var(--box-radius);
-      padding: 32px;
-      height: 100%;
-    }
-    .about-left .profile-img {
-      width: 160px;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid rgba(255, 255, 255, 0.6);
-      margin-bottom: 16px;
-    }
-
-    .skill-card {
-      border: 2px solid var(--brand-purple);
-      border-radius: var(--box-radius);
-      padding: 28px 20px;
-      height: 100%;
-      background-color: #fff;
-    }
-    .skill-title {
-      font-weight: 700;
-      letter-spacing: 0.5px;
-    }
-
-    /* Purple button styling */
-    .btn-purple {
-      background-color: var(--brand-purple);
-      color: #fff;
-      border-radius: var(--box-radius);
-      padding: 0.5rem 1.5rem;
-      font-weight: 600;
-      border: none;
-      transition: all 0.2s ease-in-out;
-    }
-
-    .btn-purple:hover,
-    .btn-purple:focus {
-      background-color: #c400ff;
-      color: #fff;
-      box-shadow: 0 0 10px rgba(170, 0, 255, 0.6);
-    }
-
-    .purple-input {
-      border: 2px solid var(--brand-purple);
-      border-radius: var(--box-radius);
-    }
-    .purple-input:focus {
-      outline: none;
-      border: 2px solid var(--brand-purple);
-      box-shadow: 0 0 8px rgba(170, 0, 255, 0.5);
-    }
-  </style>
+<title>Tricia's Introduction</title>
 </head>
-
+<link rel="stylesheet" href="css/personalprofile.css">
 <body>
+<h1>Personal Profile Web page </h1>
+<p>
+About Me<br>
+Name: Patricia Marie D. Valera<br>
+Nickname: Tricia<br>
+ 
+Education / Achievements<br>
+Course: Bachelor of Science in Information Technology<br>
+IT Experience: Gaming, MySQL Workbench, OutSystems<br>
+Hobbies & Interests<br>
+  - Listening to music<br>
+  - Watching movies, animes, series<br>
+  - Reading novels, manhwa, wattpad<br>
+Goals In Life / Dream:<br>
+  - Learn how to Drive a big bike<br>
+  - Graduate on time<br>
+  - Visit different countries<br>
+Picture Gallery<br>
+<img src="https://i.pinimg.com/originals/3e/20/17/3e20170d75e4cbf183ee3c45759869d4.png" alt="kuromi" width="500" height="600">
+</p>
 
-<main class="container py-4">
-
-  <div class="section-header">
-    <h6>A BIT ABOUT ME</h6>
-    <h2>Who Am I?</h2>
-    <p>
-      Hi, I’m Patricia Marie Valera. I love a good story, and can’t resist some juicy gossip. I’m always curious about what’s going on around me. 
-      Life’s more fun when you stay social and enjoy the little things. I’m always up for a laugh and making memories along the way.
-    </p>
-  </div>
-
-  <!-- MAIN GRID -->
-  <div class="row g-4 align-items-stretch justify-content-center" style="max-width:1100px;margin:auto;">
-
-    <div class="col-lg-5">
-      <div class="about-left h-100 text-center d-flex flex-column justify-content-center">
-        <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img1.JPG"
-             alt="Patricia Marie Valera" class="profile-img mx-auto" />
-        <p class="mt-2 mb-3">Nickname: Tricia</p>
-        <p>Bachelor of Science in Information Technology</p>
-        <p>Asia Pacific College</p>
-        <div class="mt-3">
-          <a href="#learn-more" class="btn btn-light">LEARN MORE</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-7">
-      <div class="row g-4 h-100">
-
-        <div class="col-6">
-          <div class="skill-card">
-            <div class="skill-title text-center mb-2">Skills and Experience</div>
-            <ul>
-              <li>HTML/CSS</li>
-              <li>Flutter</li>
-              <li>Vue.js and Bootstrap</li>
-              <li>Figma</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-6">
-          <div class="skill-card">
-            <div class="skill-title text-center mb-2">Favorite Apps</div>
-            <ul>
-              <li>Wattpad</li>
-              <li>Instagram</li>
-              <li>Youtube Music</li>
-              <li>Mobile Legends: Bang Bang</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-6">
-          <div class="skill-card">
-            <div class="skill-title text-center mb-2">Hobbies & Interests</div>
-            <ul>
-              <li>Listening to musics</li>
-              <li>Watching anime, dramas, movies</li>
-              <li>Reading novels, manhwa, wattpad</li>
-              <li>Badminton, Volleyball, Cycling</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-6">
-  <div class="skill-card">
-    <div class="skill-title text-center mb-2">Resources</div>
-    <ul>
-      <li><a href="https://copilot.microsoft.com/shares/dZsyAdZivkMbjkkeAmKZi" target="_blank">Copilot</a></li>
-      <li><a href="https://chatgpt.com/share/6961e818-d13c-8001-b434-17d85b1d66b2" target="_blank">ChatGPT 1</a></li>
-      <li><a href="https://chatgpt.com/share/696200a1-a4e8-800c-9dc1-549c022f8baa" target="_blank">ChatGPT 2</a></li>
-    </ul>
-  </div>
-</div>
-
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- COLLEGE PHOTOS -->
-<div id="college-photos" class="mt-5">
-  <h3 class="text-center mb-4">College Memories</h3>
-  <div class="row g-3 justify-content-center">
-    <div class="col-6 col-md-2">
-      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img2.jpg" alt="College 1" class="img-fluid rounded">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img3.jpg" alt="College 2" class="img-fluid rounded">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img5.jpg" alt="College 4" class="img-fluid rounded">
-    </div>
-    <div class="col-6 col-md-2">
-      <img src="https://github.com/PatriciaValera/WebProg-IT242-HTML-Lessons/raw/feature/2_PMV_customize_my_website/introduction/images/img6.jpg" alt="College 5" class="img-fluid rounded">
-    </div>
-  </div>
-</div>
-
-  <!-- LEAVE COMMENT -->
-  <div id="learn-more" class="mt-5 d-flex justify-content-center">
-    <div style="max-width:600px;width:100%;">
-      <h3 class="mb-3 text-center">Leave a comment</h3>
-      <form id="commentForm">
-        <input type="text" class="form-control purple-input mb-3" placeholder="Type your message here...">
-        <div class="text-center">
-          <button type="submit" class="btn btn-purple">Submit</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
