@@ -1,111 +1,48 @@
-* {
-  box-sizing: border-box;
+.page-wrapper {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: rgb(222, 201, 240);
+  padding: 20px;
 }
 
-body {
-  font-family: "Lucida Sans", sans-serif;
-  font-size: 17px;
-  margin: 0;
+h1 {
+  text-align: center;
+  font-style: italic;
 }
 
-.grid-container {
+h2 {
+  text-align: center;
+}
+
+.container {
   display: grid;
-  grid-template-areas:
-    "header"
-    "menu"
-    "main"
-    "facts"
-    "footer";
-  background-color: white;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(147, 79, 150);
+  padding: 5px;
+  gap: 5px;
 }
 
-/* Header */
-.header {
-  grid-area: header;
-  background-color: #dcd0ff;
-  text-align: center;
-  color: #000000;
-}
-
-.header > h1 {
-  font-size: 40px;
-}
-
-/* Menu */
-.menu {
-  grid-area: menu;
-}
-
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #dcd0ff;
-  color: #000000;
-}
-
-.menu li:hover {
-  background-color: #cdbdff;
-}
-
-/* Content */
-.content {
-  grid-area: main;
-}
-
-.content > h1 {
-  font-size: 30px;
-  margin-bottom: 7px;
-}
-
-.content > p {
-  margin-bottom: 7px;
-}
-
-/* Facts */
-.facts {
-  grid-area: facts;
-  border: 1px solid #000000;
-  background-color: beige;
+.container div {
+  background-color: #f1f1f1;
+  color: #000;
   padding: 10px;
-}
-
-.facts > h2 {
-  font-size: 20px;
-}
-
-/* Footer */
-.footer {
-  grid-area: footer;
-  background-color: #dcd0ff;
-  color: #000000;
+  font-size: 30px;
   text-align: center;
 }
 
-/* Responsive Layouts */
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      "header header header header header header"
-      "menu content content content content content"
-      "facts facts facts facts facts facts"
-      "footer footer footer footer footer footer";
-  }
+.profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgb(147, 79, 150);
+  padding: 5px;
+  gap: 5px;
 }
 
-@media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      "header header header header header header"
-      "menu content content content content facts"
-      "footer footer footer footer footer footer";
-  }
+.profile div {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  font-style: italic;
 }
