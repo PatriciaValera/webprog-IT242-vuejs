@@ -1,99 +1,111 @@
 * {
   box-sizing: border-box;
 }
- 
+
 body {
   font-family: "Lucida Sans", sans-serif;
   font-size: 17px;
+  margin: 0;
 }
- 
+
 .grid-container {
   display: grid;
   grid-template-areas:
-    'header'
-    'menu'
-    'main'
-    'facts'
-    'footer';
+    "header"
+    "menu"
+    "main"
+    "facts"
+    "footer";
   background-color: white;
-  gap: 10px;  
+  gap: 10px;
 }
- 
+
+/* Header */
 .header {
   grid-area: header;
   background-color: #dcd0ff;
   text-align: center;
   color: #000000;
 }
- 
+
 .header > h1 {
   font-size: 40px;
 }
- 
+
+/* Menu */
 .menu {
   grid-area: menu;
-  }
- 
+}
+
 .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
- 
+
 .menu li {
   padding: 8px;
   margin-bottom: 7px;
   background-color: #dcd0ff;
   color: #000000;
 }
- 
+
 .menu li:hover {
   background-color: #cdbdff;
 }
- 
+
+/* Content */
 .content {
   grid-area: main;
 }
- 
+
 .content > h1 {
   font-size: 30px;
   margin-bottom: 7px;
 }
- 
+
 .content > p {
   margin-bottom: 7px;
 }
- 
+
+/* Facts */
 .facts {
   grid-area: facts;
   border: 1px solid #000000;
   background-color: beige;
   padding: 10px;
 }
- 
+
 .facts > h2 {
   font-size: 20px;
 }
- 
+
+/* Footer */
 .footer {
   grid-area: footer;
   background-color: #dcd0ff;
   color: #000000;
   text-align: center;
 }
- 
+
+/* Responsive Layouts */
 @media (min-width: 600px) {
-  .header {grid-area: 1 / span 6;}
-  .menu {grid-area: 2 / span 1;}
-  .content {grid-area: 2 / span 4;}
-  .facts {grid-area: 3 / span 6;}
-  .footer {grid-area: 4 / span 6;}
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "header header header header header header"
+      "menu content content content content content"
+      "facts facts facts facts facts facts"
+      "footer footer footer footer footer footer";
+  }
 }
- 
+
 @media (min-width: 768px) {
-  .header {grid-area: 1 / span 6;}
-  .menu {grid-area: 2 / span 1;}
-  .content {grid-area: 2 / span 4;}
-  .facts {grid-area: 2 / span 1;}
-  .footer {grid-area: 3 / span 6;}
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "header header header header header header"
+      "menu content content content content facts"
+      "footer footer footer footer footer footer";
+  }
 }
