@@ -3,7 +3,6 @@
 <head>
 <title>Tricia's Introduction</title>
 </head>
-<link rel="stylesheet" href="css/personalprofile.css">
 <body>
 <h1>Personal Profile Web page </h1>
 <p>
