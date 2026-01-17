@@ -66,9 +66,11 @@ body {
 
 .pic {
   grid-area: pic;
-  border: 1px solid #0099cc;
+  border: 1px solid #dcd0ff;
   background-color: #ffffff;
   padding: 10px;
+  width: 350px; 
+  height: auto;
 }
 
 .pic > h2 {
@@ -77,6 +79,13 @@ body {
 
 .pic li {
   margin-bottom: 5px;
+}
+
+.pic img {
+  width: 100%;       
+  max-width: 250px;  
+  display: block;
+  margin: 0 auto;    
 }
 
 .footer {
