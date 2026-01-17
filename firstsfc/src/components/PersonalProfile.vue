@@ -1,55 +1,57 @@
 <template>
-  <div>
-    <h1>Personal Profile Web Page</h1>
-
-    <h2>About Me</h2>
-<div class="page-wrapper">
-    <div class="profile">
-      <div>Name: Sheila Nicole D. Cheng</div>
-      <div>
-        College undergraduate<br />
-        Course: BS Information Technology<br />
-        IT Experience: Can code with Python, JavaScript, HTML, CSS
-      </div>
-      <div>
-        Hobbies & Interests: Painting, Eating, Walking, Sleeping<br />
-        Goals In Life / Dream: I want to live my life to the fullest
-      </div>
-    </div>
-
-    <h2>Gallery</h2>
-
-    <div class="container">
-      <div>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTvfwpa0yWEj7tarq1Nfkk0NWRQ-uevnk8LYOd6w62F5JFyJ27xAL9su6bs_qE_4TVens&usqp=CAU"
-          width="200"
-          height="300"
-          alt="Gallery image 1"
-        />
-      </div>
-      <div>
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM4mQ0n9nyUvROIMh7Xa3SdZBAW1JBlWDd0MkaUvk7tiFi7QYDTw4iK8wW5GGLuz2AHXg&usqp=CAU"
-          width="200"
-          height="300"
-          alt="Gallery image 2"
-        />
-      </div>
-      <div>
-        <img
-          src="https://i.pinimg.com/236x/17/d7/ef/17d7efb9372de02f43f14e81b41d7a49.jpg"
-          width="200"
-          height="300"
-          alt="Gallery image 3"
-        />
-      </div>
-    </div>
+  <div class="container">
+    <header>
+      <h1>Tricia's Personal Profile Web page</h1>
+    </header>
+    <main>
+      <section class="main-content">
+        <div id="div1">
+          <h2>About Me</h2>
+          <p>Name: Patricia Marie D. Valera<br>
+          Nickname: Tricia</p>
+        </div>
+        <div id="div2">
+          <h2>Education / Achievements</h2>
+          <p>Course: Bachelor of Science in Information Technology</p>
+        </div>
+        <div id="div3">
+          <h2>Course</h2>
+          <p>BS Information Technology at Asia Pacific College</p>
+        </div>
+        <div id="div4">
+          <h2>IT Experience</h2>
+          <p>Hands-on with HTML, CSS, Vue.js, and cloud deployment (Azure, AWS, Vercel)</p>
+        </div>
+        <div id="div5">
+          <h2>Hobbies & Interests</h2>
+          <ul>
+            <li>Listening to music</li>
+            <li>Watching movies, animes, series</li>
+            <li>Reading novels, manhwa, wattpad</li>
+            <li>Plays badminton</li>
+            <li>Loves cycling</li>
+            <li>Loves strolling</li>
+            <li>Obsessed with purple</li>
+          </ul>
+        </div>
+        <div id="div6">
+          <h2>Goals In Life / Dream</h2>
+          <p>To showcase my identity and skills through personal projects and grow as a developer.</p>
+        </div>
+        <div id="div7">
+          <h2>Picture Gallery</h2>
+          <img src="https://i.pinimg.com/originals/aa/29/e9/aa29e9cae0a07ebf8444331813e8aba0.jpg" alt="kuromi" width="250" height="250">
+        </div>
+      </section>
+      <aside class="sidebar">
+        <!-- Optional sidebar content -->
+      </aside>
+    </main>
+    <footer>
+      Asia Pacific College
+    </footer>
   </div>
-</div>
 </template>
 
-<script>
-</script>
-
+<script></script>
 <style src="./css/personalprofile.css"></style>
