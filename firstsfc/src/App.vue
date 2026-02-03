@@ -4,7 +4,8 @@
   <personal-profile/>
   <comment-form/>
   <comment/>
-  <rest-api/>
+  <rest-api/> 
+   
 </template>
 
 <script></script>
